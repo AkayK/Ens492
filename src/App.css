@@ -1,0 +1,719 @@
+/* Genel stil ayarları */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  color: #001f3f;
+  background: url('./background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Container ayarları */
+.login-container, .registration-container, .main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-menu {
+  flex-direction: column;
+  color: #001f3f;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dil değiştirme bağlantıları */
+.language-switch {
+  text-align: right;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.language-switch a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.language-switch a:hover {
+  text-decoration: underline;
+}
+
+.main-menu h1 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; /* Kutucuklar arasındaki boşluk */
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu-grid.middle-row {
+  padding-bottom: 40px; /* Orta ve alt satır arasında boşluk */
+}
+
+.menu-item {
+  background-color: #e0e6ed;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+  min-width: 80px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  background-color: #d1d9e6;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 12px;
+  color: #001f3f;
+  text-align: center;
+}
+
+/* Form stilleri */
+.login-form, .registration-form {
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding: 40px;
+  text-align: center;
+  width: 350px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px); 
+}
+
+h2 {
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  color: #001f3f;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #001f3f;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #001f3f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+button + .sign-up-button {
+  margin-top: 10px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.remember-forgot a {
+  color: white; 
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.top-right-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.top-right-links a {
+  color: white;  
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.top-right-links a:hover {
+  text-decoration: underline;
+}
+
+/* Registration Form Styles */
+.registration-form .form-group {
+  margin-bottom: 15px;
+}
+
+.registration-form label {
+  font-size: 14px;
+}
+
+.registration-form input, 
+.registration-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.registration-form button {
+  margin-top: 20px;
+}
+/* Genel Stil Ayarları */
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.98); /* Sayfa arka planı daha açık */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center; /* Başlık ve açıklama ortalansın */
+}
+
+/* Tablo Stil Ayarları */
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white; /* Tablo arka planı tamamen beyaz */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tabloya gölge ekledim */
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366; /* Daha koyu mavi ton */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* Başlıklara biraz boşluk ekledim */
+}
+
+.course-table td {
+  background-color: #f5f5f5; /* Hücreler için açık arka plan */
+  color: #003366; /* Yazı rengi */
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed; /* Alternatif satır arka planı */
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6; /* Satır üzerine gelince renk değişimi */
+  cursor: pointer;
+}
+
+/* Başlıklar ve Açıklamalar */
+.page-title {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.registration-days-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 50px auto;
+}
+
+.registration-days-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #001f3f;
+}
+
+.registration-days-container p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.registration-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.registration-table th,
+.registration-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.registration-table th {
+  background-color: #001f3f;
+  color: white;
+}
+
+.registration-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366; 
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.page-container {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.course-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.course-table td {
+  background-color: #f9f9f9;
+}
+
+.course-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.course-table tr:hover td {
+  background-color: #d1d9e6;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.page-container {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #001f3f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page-description {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.petition-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.petition-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.petition-form input,
+.petition-form select,
+.petition-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.petition-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #003366;
+}
+.evaluation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.evaluation-table th, .evaluation-table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.evaluation-table th {
+  background-color: #001f3f;
+  color: white;
+  font-weight: bold;
+}
+
+.evaluation-table td {
+  background-color: #f9f9f9;
+}
+
+.evaluation-table tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.evaluation-table tr:hover td {
+  background-color: #d1d9e6;
+}
